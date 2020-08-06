@@ -1,0 +1,35 @@
+<ng-template #titleTemplate1>
+    <div>
+        Organisation list
+    </div>
+</ng-template>
+<input [(ngModel)]="checked" type="checkbox" (click)="showInactive()" style="margin-bottom: 10px; width: 30px;" />&nbsp; <strong>In - active</strong>
+<div style="float: right; margin-bottom: 10px;">
+    <nz-input-group [nzPrefix]="suffixIconSearch">
+        <input type="text" nz-input [(ngModel)]="searchText" placeholder="input search text" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+        <i nz-icon nzType="search"></i>
+    </ng-template>
+</div>
+<nz-table #basicTable [nzData]="org2">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Head Office Address Line 1</th>
+            <th>PostCode</th>
+            <th>Contact</th>
+            <th>is Active?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of basicTable.data | filter:searchText" (dblclick)="showData()" [routerLink]="['/org-form', data.orgId]">
+            <td>{{data.orgname}}</td>
+            <td>{{data.address1}}</td>
+            <td>{{data.fax}}</td>
+            <td>{{data.website}}</td>
+            <td>{{data.active? "Yes":"No"}}</td>
+
+        </tr>
+    </tbody>
+</nz-table>

@@ -1,0 +1,29 @@
+<ng-template #titleTemplate1>
+    <div>
+        Organisation List
+
+    </div>
+</ng-template>
+<!-- content tab -->
+
+
+<nz-table #basicTable [nzData]="service">
+    <thead>
+        <tr>
+            <th>Organisation Name</th>
+            <th>Head Office Address Line 1</th>
+            <th>Post code</th>
+            <th>Contact</th>
+            <!-- <th>Is active?</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of service">
+            <td>{{ data.serviceName }}</td>
+            <td>{{ data.shortDescription }}</td>
+            <td>{{ data.deptCode }}</td>
+            <td>{{data.subType}}</td>
+            <!-- <td>{{data.contractPayment}}</td> -->
+        </tr>
+    </tbody>
+</nz-table>

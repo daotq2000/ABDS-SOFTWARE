@@ -1,0 +1,109 @@
+.login-form {
+    max-width: 300px;
+}
+
+.login-form-margin {
+    margin-bottom: 16px;
+}
+
+.login-form-forgot {
+    float: right;
+}
+
+.login-form-button {
+    width: 100%;
+}
+
+
+/* .inner-content {
+    height: 1000px;
+} */
+
+nz-card {
+    width: 1100px;
+}
+
+.form1 {
+    width: 550px;
+    float: left;
+}
+
+.form2 {}
+
+nz-form-label {
+    font-size: 1px;
+    font-variant: tabular-nums;
+    color: red;
+}
+
+label {
+    font-size: 1px;
+    font-variant: tabular-nums;
+    color: red;
+}
+
+::ng-deep .ant-card-head-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+::ng-deep .ant-form-item-control-input {
+    width: 300px;
+    height: 32px;
+}
+
+::ng-deep.ant-btn .ant-btn-primary {
+    width: 200px;
+}
+
+:host {
+    background: #f5f5f5;
+    overflow: hidden;
+    padding: 24px;
+    display: block;
+}
+
+.card-container ::ng-deep .ant-tabs-card .ant-tabs-content {
+    height: 120px;
+    margin-top: -16px;
+}
+
+.card-container ::ng-deep .ant-tabs-card .ant-tabs-content .ant-tabs-tabpane {
+    background: #fff;
+    padding: 16px;
+}
+
+.card-container ::ng-deep .ant-tabs-card .ant-tabs-bar {
+    border-color: #fff;
+}
+
+.card-container ::ng-deep .ant-tabs-card .ant-tabs-bar .ant-tabs-tab {
+    border-color: transparent;
+    background: transparent;
+}
+
+.card-container ::ng-deep .ant-tabs-card .ant-tabs-bar .ant-tabs-tab-active {
+    border-color: #fff;
+    background: #fff;
+}
+
+::ng-deep .inner-content {
+    height: 2000px;
+}
+
+
+/* .text {
+    float: left;
+    margin-top: 100px;
+} */
+
+.detail21 {
+    float: left;
+    width: 500px;
+    /* float: right; */
+}
+
+.detail22 {
+    width: 500px;
+    float: left;
+}

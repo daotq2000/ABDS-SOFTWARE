@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function pay() {
+            var a = document.getElementById("price").value;
+
+            var sum = Math.round((parseInt(a) + 31) * 27.2);
+
+            var division = sum % 100;
+            var rs = division;
+
+            let i = 1;
+            if (rs < 50) {
+                while (i < 50) {
+                    rs += 1;
+                    if (rs == 50) {
+                        break;
+                    }
+                    // console.log(i);
+                    i++;
+                }
+                sum += i;
+            } else {
+                while (i < 100) {
+                    rs += 1;
+                    if (rs == 100) {
+                        break;
+                    }
+                    // console.log(i);
+                    i++;
+                }
+                sum += i;
+            }
+            console.log(sum);
+            document.getElementById("total").style.display = '';
+            document.getElementById("total").innerHTML = "&ensp;  Giá order về Việt Nam: " + sum + "000 VNĐ";
+
+        }
+    </script>
+    <div class="col-12">
+        <div class="form-group">
+            <label for="price">Nhập giá trên Stock X (Tính bằng USD )</label>
+            <br>
+            <input style="padding-top: 10px; border-radius: 5px 5px 5px 5px; height: 15px;height:35px;line-height: 35px" type="text" class="form-control" id="price">
+
+        </div>
+        <div class="form-group">
+            <button style="color: white; background-color:  #28a745; margin: 5px 0px 5px 0px;border-radius: 5px 5px 5px 5px;border-color: aliceblue;" onclick="pay()" type="button" class="btn btn-success" class="form-control">Tính Giá</button>
+        </div>
+
+
+        <div id="total" style="display: none;color: white; background-color:  #28a745; height: 30px;line-height: 30px; border-radius: 8px 8px 8px 8px;" class="alert alert-primary" role="alert">
+
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<ng-template #titleTemplate1>
+    <div>
+        Programmes list
+    </div>
+</ng-template>
+<input [(ngModel)]="checked" type="checkbox" (click)="showInactive()" style="margin-bottom: 10px; width: 30px;" />&nbsp; <strong>In - active</strong>
+<div style="float: right; margin-bottom: 10px;">
+    <nz-input-group [nzPrefix]="suffixIconSearch">
+        <input type="text" nz-input [(ngModel)]="searchText" placeholder="input search text" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+        <i nz-icon nzType="search"></i>
+    </ng-template>
+</div>
+<nz-table #basicTable [nzData]="programmes2">
+    <thead>
+        <tr>
+            <th>Programme Name</th>
+            <th>Description</th>
+            <th>Contact Id</th>
+            <th>Is active?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of basicTable.data | filter:searchText" [routerLink]="['/form-pg', data.programmeId]">
+            <td>{{data.programeName}}</td>
+            <td>{{data.description}}</td>
+            <td>{{data.contactId}}</td>
+            <td>{{data.isactive? "Yes": "No"}}</td>
+        </tr>
+    </tbody>
+</nz-table>

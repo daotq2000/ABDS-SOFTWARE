@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+</head>
+
+<body>
+
+    <style>
+
+    </style>
+
+    <script>
+        function pay() {
+            var x = document.getElementById("price").value;
+            var usd = 23.173;
+
+            var tong = Math.round((parseInt(x) + 31) * 27000);
+
+            document.getElementById("total").style.display = '';
+            document.getElementById("total").innerHTML = "&ensp;  Giá thực tế khi order về Việt Nam: " + parseInt(tong + 63000) + " VNĐ";
+        }
+    </script>
+    <div class="col-12">
+        <div class="form-group">
+            <label for="price">Nhập giá trên Stock X</label>
+            <br>
+            <input style="padding-top: 10px; border-radius: 5px 5px 5px 5px; height: 15px;" type="text" class="form-control" id="price">
+
+        </div>
+        <div class="form-group">
+            <button style="color: white; background-color:  #28a745; margin: 5px 0px 5px 0px;border-radius: 5px 5px 5px 5px;border-color: aliceblue;" onclick="pay()" type="button" class="btn btn-success" class="form-control">Tính Giá</button>
+        </div>
+
+
+        <div id="total" style="display: none;color: white; background-color:  #28a745; height: 30px;line-height: 30px; border-radius: 8px 8px 8px 8px;" class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div>
+
+    </div>
+</body>
+
+</html>

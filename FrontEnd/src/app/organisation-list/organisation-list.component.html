@@ -1,0 +1,187 @@
+<form nz-form [formGroup]="organisationForm" (ngSubmit)="submitForm()">
+    <table>
+        <tr>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="orgName">Organisation Name</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Hãy nhập tên tổ chức">
+                        <input nz-input id="organisationName" type="text" formControlName="orgname" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="7" [nzXs]="24" nzFor="checkbox" nzRequired>
+                        Preferred Organisation
+                    </nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <label nz-checkbox formControlName="preferenceOrg"></label>
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="orgShort" nzRequired>Organisation Short</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Hãy nhập miêu tả ngắn về tổ chức">
+                        <input nz-input type="text" id="organisationShort" formControlName="shortDepcription" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="7" [nzXs]="24" nzFor="checkbox">
+                        Expression of Interest
+                    </nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <label nz-checkbox formControlName="exInternet"></label>
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="leadContact" nzRequired>Lead Contact</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Hãy nhập LeadContact">
+                        <input nz-input type="text" id="leadContact" formControlName="contactId" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="7" [nzXs]="24" nzFor="sicCode">SIC code</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input nz-input id="sicCode" placeholder="SIC code" formControlName="sicCode" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="address1" nzRequired>Address 1</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Hãy nhập địa chỉ">
+                        <input nz-input type="text" id="address1" formControlName="address1" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="7" [nzXs]="24" nzFor="fullDesc">Organisation Full Desc</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <textarea rows="2.5" nz-input id="fullDesc" placeholder="Full Desc" formControlName="fullDescription"></textarea>
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="cityTown" nzRequired>
+                        <span>
+                      City Town
+                    </span>
+                    </nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input nz-input id="cityTown" formControlName="cityTown" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="7" [nzXs]="24" nzFor="phoneNumber">Phone Number</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Hãy nhập số điện thoại">
+                        <input nz-input id="phoneNumber" placeholder="phoneNumber" formControlName="phone" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="county" nzRequired>County</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input nz-input type="text" id="county" formControlName="country" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="7" [nzXs]="24" nzFor="Fax" nzRequired>Fax</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input nz-input id="Fax" placeholder="Fax" formControlName="fax" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="country" nzRequired>Nation/Country</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input nz-input type="text" id="country" formControlName="nationCountry" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="7" [nzXs]="24" nzFor="email" nzRequired>Email</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input nz-input id="email" placeholder="Email" formControlName="email" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="7" [nzXs]="24" nzFor="website" nzRequired>Web Address</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input nz-input id="website" placeholder="website" formControlName="website" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="7" [nzXs]="24" nzFor="Charity" nzRequired>Charity Number</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input nz-input id="Charity" placeholder="Charity" formControlName="charityNumber" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <nz-form-item>
+                    <nz-form-label [nzSm]="7" [nzXs]="24" nzFor="Company" nzRequired>CompanyNumber</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24">
+                        <input nz-input id="Company" placeholder="Company" formControlName="companyNumber" />
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <nz-form-item nz-row class="register-area">
+                    <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                        <button nz-button nzType="primary" (click)="saveSchool()">save</button>
+                    </nz-form-control>
+                </nz-form-item>
+            </td>
+        </tr>
+    </table>
+</form>

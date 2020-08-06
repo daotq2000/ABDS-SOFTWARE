@@ -1,0 +1,16 @@
+<nz-card [nzBordered] nzTitle="Programme List" nzHoverable>
+    <div style="width: 100px;">
+        <!-- <ng-template #extraTemplate> -->
+        <button nz-button nzType="primary" [routerLink]="['/form-pg']"><i nz-icon nzType="plus-circle" nzTheme="outline"></i>Create</button>
+        <!-- </ng-template> -->
+    </div>
+    <nz-tabset nzLinkRouter>
+        <nz-tab>
+            <a nz-tab-link [routerLink]="['/list-pg']">Programme list</a>
+        </nz-tab>
+        <nz-tab>
+            <a nz-tab-link [routerLink]="['/form-pg']">Detail 1</a>
+        </nz-tab>
+    </nz-tabset>
+    <router-outlet></router-outlet>
+</nz-card>

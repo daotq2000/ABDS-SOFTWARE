@@ -1,0 +1,32 @@
+<ng-template #titleTemplate1>
+    <div>
+        Address list
+    </div>
+</ng-template>
+<input [(ngModel)]="checked" type="checkbox" (click)="showInactive()" style="margin-bottom: 10px; width: 30px;" />&nbsp; <strong>In - active</strong>
+<div style="float: right; margin-bottom: 10px;">
+    <nz-input-group [nzPrefix]="suffixIconSearch">
+        <input type="text" nz-input [(ngModel)]="searchText" placeholder="input search text" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+        <i nz-icon nzType="search"></i>
+    </ng-template>
+</div>
+<nz-table> //#basicTable [nzData]="address"
+    <thead>
+        <tr>
+            <th>Post Code</th>
+            <th>Town Code</th>
+            <th>County Code</th>
+            <th>Country Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of listAdress">
+            <td>{{data.postCode}}</td>
+            <td>{{data.townId}}</td>
+            <td>{{data.countyId}}</td>
+            <td>{{data.countryId}}</td>
+        </tr>
+    </tbody>
+</nz-table>

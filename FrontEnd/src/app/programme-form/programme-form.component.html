@@ -1,0 +1,33 @@
+<form nz-form [formGroup]="programmeForm" (ngSubmit)="submitForm()">
+
+    <div class="form1">
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">Programme Name</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Không bỏ trống Programme Name">
+                <input nz-input id="prName" formControlName="programeName" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="desc" nzRequired>Description</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Không bỏ trống description">
+                <input nz-input type="text" id="desc" formControlName="description" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item nz-row class="register-area">
+            <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                <button nz-button nzType="primary" (click)="saveProgramme()">save</button>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+
+    <div class="form2">
+
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="contact" nzRequired>Contact</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Không bỏ trống contact">
+                <input nz-input id="contact" placeholder="contact" formControlName="contactId" />
+            </nz-form-control>
+        </nz-form-item>
+
+    </div>
+</form>
